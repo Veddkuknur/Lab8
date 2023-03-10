@@ -66,8 +66,13 @@ public class CustomList extends ArrayAdapter<City> {
             }
         }
     }
-    public boolean hasCity(City city){
-
-        return false;
+    public boolean hasCity(City city) {
+        boolean hasTheCity = false;
+        for (int i = 0; i < cities.size(); i++) {
+            if (cities.get(i) == city) {
+                hasTheCity=true;
+            }
+        }
+        return hasTheCity;
     }
 }
